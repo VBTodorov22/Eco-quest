@@ -1,0 +1,9 @@
+.app-component-container {
+  display: flex;
+  position: relative;
+}
+@media(max-width: 1600px) {
+  .app-component-text {
+    min-width: var(--dl-size-size-xxlarge);
+  }
+}

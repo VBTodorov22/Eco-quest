@@ -1,12 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Green Chalenges</title>
-    <meta property="og:title" content="Fumbling Bumpy Elk" />
+    <title>EcoQuest</title>
+    <meta property="og:title" content="EcoQuest" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
     <meta property="twitter:card" content="summary_large_image" />
-    <link rel="stylesheet" href="./index.css" />
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Inter;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-gray-black);
+        background-color: var(--dl-color-gray-white);
+
+      }
+    </style>
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
@@ -22,28 +43,49 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
       data-tag="font"
     />
-    
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
+    />
+    <style>
+      @keyframes fade-in-left {
+        0% {
+          opacity: 0;
+          transform: translateX(-20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+    </style>
   </head>
   <body>
-    
+    <link rel="stylesheet" href="./style.css" />
     <div>
       <link href="./index.css" rel="stylesheet" />
-      
+
       <div class="home-container">
         <nav class="home-header">
           <header data-thq="thq-navbar" class="home-navbar-interactive">
-            <div data-thq="thq-navbar-nav" class="home-desktop-menu">
-              <nav class="home-links">
-                <button>Home</span>
-                <button class="home-nav2">About</span>
-                <button class="home-nav3">Services</span>
-                <button class="home-nav4">Projects</span>
-                <button class="home-nav5">Contact</span>
-              </nav>
-              <div class="home-buttons">
-                <button class="home-login button">Login</button>
-                <button class="home-register button">Register</button>
+            <nav class="home-links">
+              <span>Home</span>
+              <span class="home-nav2">About</span>
+              <span class="home-nav3">Services</span>
+              <span class="home-nav4">Projects</span>
+              <div class="home-container01">
+                <span class="home-nav5">Contact</span>
               </div>
+            </nav>
+            <div class="home-container02">
+              <div class="home-container03">
+                <div data-thq="thq-navbar-nav" class="home-desktop-menu"></div>
+              </div>
+            </div>
+            <div class="home-container04"></div>
+            <div class="home-buttons">
+              <button class="home-login button">Login</button>
+              <button class="home-register button">Register</button>
             </div>
             <div data-thq="thq-burger-menu" class="home-burger-menu">
               <svg viewBox="0 0 1024 1024" class="home-icon">
@@ -55,7 +97,7 @@
             <div data-thq="thq-mobile-menu" class="home-mobile-menu">
               <div class="home-nav">
                 <div class="home-top">
-                  <span class="home-logo">EcoQuest</span>
+                  <span class="home-logo">ECOLOGY</span>
                   <div data-thq="thq-close-menu" class="home-close-menu">
                     <svg viewBox="0 0 1024 1024" class="home-icon02">
                       <path
@@ -80,12 +122,12 @@
                 <svg viewBox="0 0 950.8571428571428 1024" class="home-icon04">
                   <path
                     d="M925.714 233.143c-25.143 36.571-56.571 69.143-92.571 95.429 0.571 8 0.571 16 0.571 24 0 244-185.714 525.143-525.143 525.143-104.571 0-201.714-30.286-283.429-82.857 14.857 1.714 29.143 2.286 44.571 2.286 86.286 0 165.714-29.143 229.143-78.857-81.143-1.714-149.143-54.857-172.571-128 11.429 1.714 22.857 2.857 34.857 2.857 16.571 0 33.143-2.286 48.571-6.286-84.571-17.143-148-91.429-148-181.143v-2.286c24.571 13.714 53.143 22.286 83.429 23.429-49.714-33.143-82.286-89.714-82.286-153.714 0-34.286 9.143-65.714 25.143-93.143 90.857 112 227.429 185.143 380.571 193.143-2.857-13.714-4.571-28-4.571-42.286 0-101.714 82.286-184.571 184.571-184.571 53.143 0 101.143 22.286 134.857 58.286 41.714-8 81.714-23.429 117.143-44.571-13.714 42.857-42.857 78.857-81.143 101.714 37.143-4 73.143-14.286 106.286-28.571z"
-                  ></path></svg>
-                <svg viewBox="0 0 877.7142857142857 1024" class="home-icon06">
+                  ></path></svg
+                ><svg viewBox="0 0 877.7142857142857 1024" class="home-icon06">
                   <path
                     d="M585.143 512c0-80.571-65.714-146.286-146.286-146.286s-146.286 65.714-146.286 146.286 65.714 146.286 146.286 146.286 146.286-65.714 146.286-146.286zM664 512c0 124.571-100.571 225.143-225.143 225.143s-225.143-100.571-225.143-225.143 100.571-225.143 225.143-225.143 225.143 100.571 225.143 225.143zM725.714 277.714c0 29.143-23.429 52.571-52.571 52.571s-52.571-23.429-52.571-52.571 23.429-52.571 52.571-52.571 52.571 23.429 52.571 52.571zM438.857 152c-64 0-201.143-5.143-258.857 17.714-20 8-34.857 17.714-50.286 33.143s-25.143 30.286-33.143 50.286c-22.857 57.714-17.714 194.857-17.714 258.857s-5.143 201.143 17.714 258.857c8 20 17.714 34.857 33.143 50.286s30.286 25.143 50.286 33.143c57.714 22.857 194.857 17.714 258.857 17.714s201.143 5.143 258.857-17.714c20-8 34.857-17.714 50.286-33.143s25.143-30.286 33.143-50.286c22.857-57.714 17.714-194.857 17.714-258.857s5.143-201.143-17.714-258.857c-8-20-17.714-34.857-33.143-50.286s-30.286-25.143-50.286-33.143c-57.714-22.857-194.857-17.714-258.857-17.714zM877.714 512c0 60.571 0.571 120.571-2.857 181.143-3.429 70.286-19.429 132.571-70.857 184s-113.714 67.429-184 70.857c-60.571 3.429-120.571 2.857-181.143 2.857s-120.571 0.571-181.143-2.857c-70.286-3.429-132.571-19.429-184-70.857s-67.429-113.714-70.857-184c-3.429-60.571-2.857-120.571-2.857-181.143s-0.571-120.571 2.857-181.143c3.429-70.286 19.429-132.571 70.857-184s113.714-67.429 184-70.857c60.571-3.429 120.571-2.857 181.143-2.857s120.571-0.571 181.143 2.857c70.286 3.429 132.571 19.429 184 70.857s67.429 113.714 70.857 184c3.429 60.571 2.857 120.571 2.857 181.143z"
-                  ></path></svg>
-                <svg viewBox="0 0 602.2582857142856 1024" class="home-icon08">
+                  ></path></svg
+                ><svg viewBox="0 0 602.2582857142856 1024" class="home-icon08">
                   <path
                     d="M548 6.857v150.857h-89.714c-70.286 0-83.429 33.714-83.429 82.286v108h167.429l-22.286 169.143h-145.143v433.714h-174.857v-433.714h-145.714v-169.143h145.714v-124.571c0-144.571 88.571-223.429 217.714-223.429 61.714 0 114.857 4.571 130.286 6.857z"
                   ></path>
@@ -96,23 +138,25 @@
         </nav>
         <div class="home-hero">
           <div class="home-hero1">
-            <div class="home-container01">
+            <div class="home-container05">
               <h1 class="home-hero-heading heading1">
-                Improving Our Planet&apos;s Ecology
+                Improving Our Planet's Ecology
               </h1>
               <span class="home-hero-sub-heading">
                 Join us in creating a sustainable future
               </span>
               <div class="home-btn-group">
                 <button class="home-hero-button1 button">Get Started</button>
-                <button class="home-hero-button2 button">Learn More →</button>
+                <button class="home-hero-button2 button">
+                  Learn More&nbsp;→
+                </button>
               </div>
             </div>
           </div>
         </div>
         <div class="home-details">
           <div class="home-details1">
-            <div class="home-container02">
+            <div class="home-container06">
               <span class="home-text sectionTitle">
                 <span>Details</span>
                 <br />
@@ -122,8 +166,8 @@
               </h2>
               <span class="home-details-sub-heading">
                 We are dedicated to promoting environmental awareness and
-                implementing sustainable practices. Together, we can preserve our
-                planet for future generations.
+                implementing sustainable practices. Together, we can preserve
+                our planet for future generations.
               </span>
             </div>
             <img
@@ -136,17 +180,19 @@
         <div class="home-features">
           <div class="home-features-container">
             <div class="home-features1">
-              <div class="home-container03">
+              <div class="home-container07">
                 <span class="home-text03 sectionTitle">
                   <span>features</span>
                   <br />
                 </span>
-                <h2 class="home-features-heading heading2">Empowering Change</h2>
+                <h2 class="home-features-heading heading2">
+                  Empowering Change
+                </h2>
                 <span class="home-features-sub-heading">
                   Take action and make a difference for a greener future.
                 </span>
               </div>
-              <div class="home-container04">
+              <div class="home-container08">
                 <div class="feature-card-feature-card">
                   <svg viewBox="0 0 1024 1024" class="feature-card-icon">
                     <path
@@ -178,7 +224,8 @@
                     <span class="feature-card-text1">
                       <span>
                         Access a variety of educational resources to learn about
-                        environmental issues and how you can make a positive impact.
+                        environmental issues and how you can make a positive
+                        impact.
                       </span>
                     </span>
                   </div>
@@ -195,8 +242,8 @@
                     </h3>
                     <span class="feature-card-text1">
                       <span>
-                        Join a vibrant community of like-minded individuals who are
-                        passionate about improving our planet's ecology.
+                        Join a vibrant community of like-minded individuals who
+                        are passionate about improving our planet's ecology.
                       </span>
                     </span>
                   </div>
@@ -225,10 +272,10 @@
         </div>
         <div class="home-pricing">
           <div class="home-pricing1">
-            <div class="home-container05">
+            <div class="home-container09">
               <span class="home-text06 sectionTitle">
                 <span>Pricing</span>
-                
+                <br />
               </span>
               <h2 class="home-pricing-heading heading2">
                 Some title for a pricing section
@@ -237,41 +284,41 @@
                 Some catchy text for a pricing section
               </span>
             </div>
-            <div class="home-container06">
+            <div class="home-container10">
               <div class="home-pricing-card">
-                <div class="home-container07">
+                <div class="home-container11">
                   <span class="home-text09 heading3">Free</span>
                   <span class="home-free-plan-description">
                     A short description for the free plan
                   </span>
                 </div>
-                <div class="home-container08">
+                <div class="home-container12">
                   <span class="home-text10">
                     <span>$</span>
                     <span></span>
                   </span>
                   <span class="home-free-plan-price">0</span>
                 </div>
-                <div class="home-container09">
-                  <div class="home-container10">
+                <div class="home-container13">
+                  <div class="home-container14">
                     <span class="home-text13">✔</span>
                     <span class="home-free-plan-features">
                       A feature of the free plan
                     </span>
                   </div>
-                  <div class="home-container11">
+                  <div class="home-container15">
                     <span class="home-text14">✔</span>
                     <span class="home-free-plan-features1">
                       A feature of the free plan
                     </span>
                   </div>
-                  <div class="home-container12">
+                  <div class="home-container16">
                     <span class="home-text15">✔</span>
                     <span class="home-free-plan-features2">
                       A feature of the free plan
                     </span>
                   </div>
-                  <div class="home-container13">
+                  <div class="home-container17">
                     <span class="home-text16">✔</span>
                     <span class="home-free-plan-features3">
                       A feature of the free plan
@@ -281,13 +328,13 @@
                 <button class="home-button button">Continue with Free</button>
               </div>
               <div class="home-pricing-card1">
-                <div class="home-container14">
+                <div class="home-container18">
                   <span class="home-text17 heading3">BASIC</span>
                   <span class="home-basic-plan-description">
                     A short description for the basic plan
                   </span>
                 </div>
-                <div class="home-container15">
+                <div class="home-container19">
                   <span class="home-text18">
                     <span>$</span>
                     <span></span>
@@ -295,30 +342,30 @@
                   <span class="home-basic-plan-pricing">7</span>
                   <span class="home-text21">/ month</span>
                 </div>
-                <div class="home-container16">
-                  <div class="home-container17">
+                <div class="home-container20">
+                  <div class="home-container21">
                     <span class="home-text22">✔</span>
                     <span class="home-text23">All features of FREE plan</span>
                   </div>
-                  <div class="home-container18">
+                  <div class="home-container22">
                     <span class="home-text24">✔</span>
                     <span class="home-basic-plan-features">
                       A feature of the basic plan
                     </span>
                   </div>
-                  <div class="home-container19">
+                  <div class="home-container23">
                     <span class="home-text25">✔</span>
                     <span class="home-basic-plan-features1">
                       A feature of the basic plan
                     </span>
                   </div>
-                  <div class="home-container20">
+                  <div class="home-container24">
                     <span class="home-text26">✔</span>
                     <span class="home-basic-plan-features2">
                       A feature of the basic plan
                     </span>
                   </div>
-                  <div class="home-container21">
+                  <div class="home-container25">
                     <span class="home-text27">✔</span>
                     <span class="home-basic-plan-features3">
                       A feature of the basic plan
@@ -328,7 +375,7 @@
                 <button class="home-button1 button">Try the Basic plan</button>
               </div>
               <div class="home-pricing-card2">
-                <div class="home-container22">
+                <div class="home-container26">
                   <span class="home-text28 heading3">
                     <span>PRO</span>
                     <br />
@@ -337,7 +384,7 @@
                     A short description for the pro plan
                   </span>
                 </div>
-                <div class="home-container23">
+                <div class="home-container27">
                   <span class="home-text31">
                     <span>$</span>
                     <span></span>
@@ -345,26 +392,26 @@
                   <span class="home-pro-plan-pricing">20</span>
                   <span class="home-text34">/ month</span>
                 </div>
-                <div class="home-container24">
-                  <div class="home-container25">
+                <div class="home-container28">
+                  <div class="home-container29">
                     <span class="home-text35">✔</span>
                     <span class="home-text36">
                       &nbsp;All features of BASIC plan
                     </span>
                   </div>
-                  <div class="home-container26">
+                  <div class="home-container30">
                     <span class="home-text37">✔</span>
                     <span class="home-pro-plan-features">
                       A feature of the pro plan
                     </span>
                   </div>
-                  <div class="home-container27">
+                  <div class="home-container31">
                     <span class="home-text38">✔</span>
                     <span class="home-pro-plan-features1">
                       A feature of the pro plan
                     </span>
                   </div>
-                  <div class="home-container28">
+                  <div class="home-container32">
                     <span class="home-text39">✔</span>
                     <span class="home-pro-plan-features2">
                       A feature of the pro plan
@@ -383,7 +430,7 @@
               Take a look at these captivating images that showcase the beauty
               of our planet and the efforts to improve its ecology.
             </span>
-            <div class="home-container29">
+            <div class="home-container33">
               <div
                 class="gallery-card3-gallery-card gallery-card3-root-class-name"
               >
@@ -509,7 +556,7 @@
         <div class="home-faq">
           <div class="home-faq-container">
             <div class="home-faq1">
-              <div class="home-container30">
+              <div class="home-container34">
                 <span class="home-text40 sectionTitle">
                   <span>FAQ</span>
                   <br />
@@ -542,7 +589,7 @@
                   </span>
                 </span>
               </div>
-              <div class="home-container31">
+              <div class="home-container35">
                 <div class="question-container">
                   <span class="question-text heading4">
                     <span>What is the purpose of this website?</span>
@@ -620,7 +667,7 @@
         </div>
         <div class="home-footer">
           <footer class="home-footer1">
-            <div class="home-container32">
+            <div class="home-container36">
               <span class="home-logo1">ECOLOGY</span>
               <nav class="home-nav1">
                 <span class="home-nav12">Home</span>
@@ -631,67 +678,56 @@
               </nav>
             </div>
             <div class="home-separator"></div>
-            <div class="home-container33">
+            <div class="home-container37">
               <span class="home-text61">
                 © 2023 myCompany, All Rights Reserved.
               </span>
               <div class="home-icon-group1">
                 <a
-              href="https://twitter.com"
-              target="_blank"
-              rel="noreferrer noopener"
-              class="home-link"
-            >
-              <svg viewBox="0 0 950.8571428571428 1024" class="home-icon10">
-                <path
-                  d="M925.714 233.143c-25.143 36.571-56.571 69.143-92.571 95.429 0.571 8 0.571 16 0.571 24 0 244-185.714 525.143-525.143 525.143-104.571 0-201.714-30.286-283.429-82.857 14.857 1.714 29.143 2.286 44.571 2.286 86.286 0 165.714-29.143 229.143-78.857-81.143-1.714-149.143-54.857-172.571-128 11.429 1.714 22.857 2.857 34.857 2.857 16.571 0 33.143-2.286 48.571-6.286-84.571-17.143-148-91.429-148-181.143v-2.286c24.571 13.714 53.143 22.286 83.429 23.429-49.714-33.143-82.286-89.714-82.286-153.714 0-34.286 9.143-65.714 25.143-93.143 90.857 112 227.429 185.143 380.571 193.143-2.857-13.714-4.571-28-4.571-42.286 0-101.714 82.286-184.571 184.571-184.571 53.143 0 101.143 22.286 134.857 58.286 41.714-8 81.714-23.429 117.143-44.571-13.714 42.857-42.857 78.857-81.143 101.714 37.143-4 73.143-14.286 106.286-28.571z"
-                ></path>
-              </svg>
-            </a>
-            <a
-              href="https://instagram.com"
-              target="_blank"
-              rel="noreferrer noopener"
-              class="home-link1"
-            >
-              <svg viewBox="0 0 877.7142857142857 1024" class="home-icon12">
-                <path
-                  d="M585.143 512c0-80.571-65.714-146.286-146.286-146.286s-146.286 65.714-146.286 146.286 65.714 146.286 146.286 146.286 146.286-65.714 146.286-146.286zM664 512c0 124.571-100.571 225.143-225.143 225.143s-225.143-100.571-225.143-225.143 100.571-225.143 225.143-225.143 225.143 100.571 225.143 225.143zM725.714 277.714c0 29.143-23.429 52.571-52.571 52.571s-52.571-23.429-52.571-52.571 23.429-52.571 52.571-52.571 52.571 23.429 52.571 52.571zM438.857 152c-64 0-201.143-5.143-258.857 17.714-20 8-34.857 17.714-50.286 33.143s-25.143 30.286-33.143 50.286c-22.857 57.714-17.714 194.857-17.714 258.857s-5.143 201.143 17.714 258.857c8 20 17.714 34.857 33.143 50.286s30.286 25.143 50.286 33.143c57.714 22.857 194.857 17.714 258.857 17.714s201.143 5.143 258.857-17.714c20-8 34.857-17.714 50.286-33.143s25.143-30.286 33.143-50.286c22.857-57.714 17.714-194.857 17.714-258.857s5.143-201.143-17.714-258.857c-8-20-17.714-34.857-33.143-50.286s-30.286-25.143-50.286-33.143c-57.714-22.857-194.857-17.714-258.857-17.714zM877.714 512c0 60.571 0.571 120.571-2.857 181.143-3.429 70.286-19.429 132.571-70.857 184s-113.714 67.429-184 70.857c-60.571 3.429-120.571 2.857-181.143 2.857s-120.571 0.571-181.143-2.857c-70.286-3.429-132.571-19.429-184-70.857s-67.429-113.714-70.857-184c-3.429-60.571-2.857-120.571-2.857-181.143s-0.571-120.571 2.857-181.143c3.429-70.286 19.429-132.571 70.857-184s113.714-67.429 184-70.857c60.571-3.429 120.571-2.857 181.143-2.857s120.571-0.571 181.143 2.857c70.286 3.429 132.571 19.429 184 70.857s67.429 113.714 70.857 184c3.429 60.571 2.857 120.571 2.857 181.143z"
-                ></path>
-              </svg>
-            </a>
-            <a
-              href="https://facbook.com"
-              target="_blank"
-              rel="noreferrer noopener"
-              class="home-link2"
-            >
-              <svg viewBox="0 0 602.2582857142856 1024" class="home-icon14">
-                <path
-                  d="M548 6.857v150.857h-89.714c-70.286 0-83.429 33.714-83.429 82.286v108h167.429l-22.286 169.143h-145.143v433.714h-174.857v-433.714h-145.714v-169.143h145.714v-124.571c0-144.571 88.571-223.429 217.714-223.429 61.714 0 114.857 4.571 130.286 6.857z"
-                ></path>
-              </svg>
-            </a>
-                <svg viewBox="0 0 950.8571428571428 1024" class="home-icon10">
-                  <path
-                    d="M925.714 233.143c-25.143 36.571-56.571 69.143-92.571 95.429 0.571 8 0.571 16 0.571 24 0 244-185.714 525.143-525.143 525.143-104.571 0-201.714-30.286-283.429-82.857 14.857 1.714 29.143 2.286 44.571 2.286 86.286 0 165.714-29.143 229.143-78.857-81.143-1.714-149.143-54.857-172.571-128 11.429 1.714 22.857 2.857 34.857 2.857 16.571 0 33.143-2.286 48.571-6.286-84.571-17.143-148-91.429-148-181.143v-2.286c24.571 13.714 53.143 22.286 83.429 23.429-49.714-33.143-82.286-89.714-82.286-153.714 0-34.286 9.143-65.714 25.143-93.143 90.857 112 227.429 185.143 380.571 193.143-2.857-13.714-4.571-28-4.571-42.286 0-101.714 82.286-184.571 184.571-184.571 53.143 0 101.143 22.286 134.857 58.286 41.714-8 81.714-23.429 117.143-44.571-13.714 42.857-42.857 78.857-81.143 101.714 37.143-4 73.143-14.286 106.286-28.571z"
-                  ></path></svg>
-                <svg viewBox="0 0 877.7142857142857 1024" class="home-icon12">
-                  <path
-                    d="M585.143 512c0-80.571-65.714-146.286-146.286-146.286s-146.286 65.714-146.286 146.286 65.714 146.286 146.286 146.286 146.286-65.714 146.286-146.286zM664 512c0 124.571-100.571 225.143-225.143 225.143s-225.143-100.571-225.143-225.143 100.571-225.143 225.143-225.143 225.143 100.571 225.143 225.143zM725.714 277.714c0 29.143-23.429 52.571-52.571 52.571s-52.571-23.429-52.571-52.571 23.429-52.571 52.571-52.571 52.571 23.429 52.571 52.571zM438.857 152c-64 0-201.143-5.143-258.857 17.714-20 8-34.857 17.714-50.286 33.143s-25.143 30.286-33.143 50.286c-22.857 57.714-17.714 194.857-17.714 258.857s-5.143 201.143 17.714 258.857c8 20 17.714 34.857 33.143 50.286s30.286 25.143 50.286 33.143c57.714 22.857 194.857 17.714 258.857 17.714s201.143 5.143 258.857-17.714c20-8 34.857-17.714 50.286-33.143s25.143-30.286 33.143-50.286c22.857-57.714 17.714-194.857 17.714-258.857s5.143-201.143-17.714-258.857c-8-20-17.714-34.857-33.143-50.286s-30.286-25.143-50.286-33.143c-57.714-22.857-194.857-17.714-258.857-17.714zM877.714 512c0 60.571 0.571 120.571-2.857 181.143-3.429 70.286-19.429 132.571-70.857 184s-113.714 67.429-184 70.857c-60.571 3.429-120.571 2.857-181.143 2.857s-120.571 0.571-181.143-2.857c-70.286-3.429-132.571-19.429-184-70.857s-67.429-113.714-70.857-184c-3.429-60.571-2.857-120.571-2.857-181.143s-0.571-120.571 2.857-181.143c3.429-70.286 19.429-132.571 70.857-184s113.714-67.429 184-70.857c60.571-3.429 120.571-2.857 181.143-2.857s120.571-0.571 181.143 2.857c70.286 3.429 132.571 19.429 184 70.857s67.429 113.714 70.857 184c3.429 60.571 2.857 120.571 2.857 181.143z"
-                  ></path></svg>
-                <svg viewBox="0 0 602.2582857142856 1024" class="home-icon14">
-                  <path
-                    d="M548 6.857v150.857h-89.714c-70.286 0-83.429 33.714-83.429 82.286v108h167.429l-22.286 169.143h-145.143v433.714h-174.857v-433.714h-145.714v-169.143h145.714v-124.571c0-144.571 88.571-223.429 217.714-223.429 61.714 0 114.857 4.571 130.286 6.857z"
-                  ></path>
-                </svg>
+                  href="https://twitter.com"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="home-link"
+                >
+                  <svg viewBox="0 0 950.8571428571428 1024" class="home-icon10">
+                    <path
+                      d="M925.714 233.143c-25.143 36.571-56.571 69.143-92.571 95.429 0.571 8 0.571 16 0.571 24 0 244-185.714 525.143-525.143 525.143-104.571 0-201.714-30.286-283.429-82.857 14.857 1.714 29.143 2.286 44.571 2.286 86.286 0 165.714-29.143 229.143-78.857-81.143-1.714-149.143-54.857-172.571-128 11.429 1.714 22.857 2.857 34.857 2.857 16.571 0 33.143-2.286 48.571-6.286-84.571-17.143-148-91.429-148-181.143v-2.286c24.571 13.714 53.143 22.286 83.429 23.429-49.714-33.143-82.286-89.714-82.286-153.714 0-34.286 9.143-65.714 25.143-93.143 90.857 112 227.429 185.143 380.571 193.143-2.857-13.714-4.571-28-4.571-42.286 0-101.714 82.286-184.571 184.571-184.571 53.143 0 101.143 22.286 134.857 58.286 41.714-8 81.714-23.429 117.143-44.571-13.714 42.857-42.857 78.857-81.143 101.714 37.143-4 73.143-14.286 106.286-28.571z"
+                    ></path>
+                  </svg>
+                </a>
+                <a
+                  href="https://instagram.com"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="home-link1"
+                >
+                  <svg viewBox="0 0 877.7142857142857 1024" class="home-icon12">
+                    <path
+                      d="M585.143 512c0-80.571-65.714-146.286-146.286-146.286s-146.286 65.714-146.286 146.286 65.714 146.286 146.286 146.286 146.286-65.714 146.286-146.286zM664 512c0 124.571-100.571 225.143-225.143 225.143s-225.143-100.571-225.143-225.143 100.571-225.143 225.143-225.143 225.143 100.571 225.143 225.143zM725.714 277.714c0 29.143-23.429 52.571-52.571 52.571s-52.571-23.429-52.571-52.571 23.429-52.571 52.571-52.571 52.571 23.429 52.571 52.571zM438.857 152c-64 0-201.143-5.143-258.857 17.714-20 8-34.857 17.714-50.286 33.143s-25.143 30.286-33.143 50.286c-22.857 57.714-17.714 194.857-17.714 258.857s-5.143 201.143 17.714 258.857c8 20 17.714 34.857 33.143 50.286s30.286 25.143 50.286 33.143c57.714 22.857 194.857 17.714 258.857 17.714s201.143 5.143 258.857-17.714c20-8 34.857-17.714 50.286-33.143s25.143-30.286 33.143-50.286c22.857-57.714 17.714-194.857 17.714-258.857s5.143-201.143-17.714-258.857c-8-20-17.714-34.857-33.143-50.286s-30.286-25.143-50.286-33.143c-57.714-22.857-194.857-17.714-258.857-17.714zM877.714 512c0 60.571 0.571 120.571-2.857 181.143-3.429 70.286-19.429 132.571-70.857 184s-113.714 67.429-184 70.857c-60.571 3.429-120.571 2.857-181.143 2.857s-120.571 0.571-181.143-2.857c-70.286-3.429-132.571-19.429-184-70.857s-67.429-113.714-70.857-184c-3.429-60.571-2.857-120.571-2.857-181.143s-0.571-120.571 2.857-181.143c3.429-70.286 19.429-132.571 70.857-184s113.714-67.429 184-70.857c60.571-3.429 120.571-2.857 181.143-2.857s120.571-0.571 181.143 2.857c70.286 3.429 132.571 19.429 184 70.857s67.429 113.714 70.857 184c3.429 60.571 2.857 120.571 2.857 181.143z"
+                    ></path>
+                  </svg>
+                </a>
+                <a
+                  href="https://facbook.com"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="home-link2"
+                >
+                  <svg viewBox="0 0 602.2582857142856 1024" class="home-icon14">
+                    <path
+                      d="M548 6.857v150.857h-89.714c-70.286 0-83.429 33.714-83.429 82.286v108h167.429l-22.286 169.143h-145.143v433.714h-174.857v-433.714h-145.714v-169.143h145.714v-124.571c0-144.571 88.571-223.429 217.714-223.429 61.714 0 114.857 4.571 130.286 6.857z"
+                    ></path>
+                  </svg>
+                </a>
               </div>
             </div>
           </footer>
         </div>
       </div>
     </div>
-    <script src="./package.json"></script>
+    <script
+      data-section-id="navbar"
+      src="https://unpkg.com/@teleporthq/teleport-custom-scripts"
+    ></script>
   </body>
 </html>
-

@@ -39,7 +39,7 @@
   --dl-color-secondary-gray500: #d9d9d9ff;
   --dl-color-secondary-grey400: #eff0f2ff;
   --dl-space-space-oneandhalfunits: 24px;
-  --dl-color-primary-backgroundcolor: #2e9e1fff;
+  --dl-color-primary-backgroundcolor: #2da41eff;
 }
 .button {
   color: var(--dl-color-gray-black);
